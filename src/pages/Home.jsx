@@ -49,7 +49,7 @@ const Home = () => {
             </GridItem>
 
             <GridItem p={2}>
-                <Flex gap={2}>
+                <Flex gap={2} justifyContent='space-around' alignItems='center' flexWrap='wrap'>
                     {dataVideo.map(item =>
                         <Link to={`/video/${item._id}`} key={item._id} >
                             <Cards item={item} />

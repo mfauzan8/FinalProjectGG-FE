@@ -5,7 +5,7 @@ const Cards = ({ item }) => {
   return (
     <Box
       h="300px"
-      w="410px"
+      w="24vw"
       borderRadius="md"
       overflow="hidden"
       position="relative"

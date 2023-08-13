@@ -11,9 +11,8 @@ const theme = extendTheme({
     global: {
       body: {
         bg: "#063578",
-        minHeight: "100vh",
         color: 'white',
-
+        minHeight: "100vh",
       },
     },
   }
