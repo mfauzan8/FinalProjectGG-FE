@@ -14,7 +14,7 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/video/:id">
+        <Route exactt path="/video/:id">
           <VideoDetails />
         </Route>
         <Route path="*">

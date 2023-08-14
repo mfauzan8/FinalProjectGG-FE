@@ -6,6 +6,7 @@ import { AxiosInstance } from '../config/AxiosInstance';
 import InputComment from '../components/InputComment';
 import Product from '../components/Product'; 4
 import ReactPlayer from 'react-player/youtube'
+import moment from 'moment'
 
 
 const VideoDetails = () => {
@@ -111,7 +112,8 @@ const VideoDetails = () => {
                         <Text key={comment._id} color='skyblue' >
                             {comment.username}
                             <span style={{ fontWeight: '400', fontSize: '14px', color: 'white' }}> : {comment.comment}
-                            </span>
+                            </span> <i style={{ fontSize: '10px', color: 'yellow', fontWeight: '400' }}>
+                                {moment(comment.timestamp).calendar()}</i>
                         </Text>
                     ))}
                     <InputComment
@@ -133,7 +135,14 @@ const VideoDetails = () => {
                 <ReactPlayer url={videoUrl} width='100%' height='100%' controls playing muted />
             </GridItem>
 
-            <GridItem mx='1' mb='1' area={'footer'} display='flex' gap={1}>
+            <GridItem
+                mx='1'
+                mb='1'
+                area={'footer'}
+                display='flex'
+                overflowX="auto"
+                maxWidth='100%'
+                gap={1}>
                 {product.map(item =>
                     (<Product item={item} key={item._id} />)
                 )}

@@ -18,15 +18,22 @@ const Home = () => {
     }, []);
 
     const handleOnClickTabbing = (e) => {
-        const updateTab = tab.map(item => {
-            if (item.name === e) {
-                return ({ ...item, isActive: true })
-            } else {
-                return ({ ...item, isActive: false })
-            }
-        })
-        setTab(updateTab)
-    }
+        const updatedTab = tab.map((item) => ({
+            ...item,
+            isActive: item.name === e ? true : false,
+        }));
+        setTab(updatedTab);
+
+        const findTab = tab.find(({ isActive }) => isActive === true)
+        if (findTab.name === e) {
+            setDataVideo(dataVideo)
+        } else {
+            setDataVideo(dataVideo.reverse())
+        }
+    };
+
+
+
 
     return (
         <Grid templateRows="70px 1fr" h="100vh" w="100vw" gap={2}>
