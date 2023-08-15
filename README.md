@@ -1,8 +1,27 @@
-# React + Vite
+# Project name and description
+**FinalProjectGG-FE** is a web application inspired by Tokopedia Play.It allows users to watch videos and view the products offered and make comments.
+# Features
+1. Showing list Videos
+2. Showing Videos Detail
+3. Displays a list of products associated with the video 
+4. Displays comment associated with the video
+5. Submit a comment by entering your username and comment text
+# How to run local
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Clone This Repository
+```bash
+git clone https://github.com/mfauzan8/FinalProjectGG-FE.git
+```
+Create .env
+```bash
+VITE_BASE_API_URL = 
+```
+Use yarn to install
+ ```bash
+ yarn install
+```
+run with react + vite app
+```bash
+yarn dev
+```
+That's it!
